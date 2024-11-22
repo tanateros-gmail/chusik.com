@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHUSIK - Фитнес, Здоровое Питание, Похудение, Йога</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+          content="CHUSIK: Услуги фитнеса, йоги, здорового питания и похудения в Испании. Улучшите свой образ жизни вместе с нами.">
+    <meta name="keywords"
+          content="фитнес в Испании, йога в Испании, здоровое питание, похудение, здоровый образ жизни, благополучие, индивидуальные диеты">
+    <meta name="author" content="CHUSIK">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="geo.region" content="ES">
+    <meta name="geo.placename" content="Испания">
+    <meta name="language" content="ru">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="CHUSIK - Фитнес, Йога, Здоровое питание и Похудение в Испании">
+    <meta property="og:description"
+          content="Присоединяйтесь к CHUSIK для улучшения вашего образа жизни в Испании. Мы предлагаем фитнес, йогу, здоровое питание и индивидуальные программы похудения.">
+    <meta property="og:image" content="https://chusik.com/wp-content/uploads/2019/06/logo-grande.png">
+    <meta property="og:url" content="https://chusik.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CHUSIK - Фитнес, Йога и Здоровый образ жизни в Испании">
+    <meta name="twitter:description"
+          content="Измените свою жизнь с CHUSIK. Услуги фитнеса, йоги и здорового питания, адаптированные под ваши нужды в Испании.">
+    <meta name="twitter:image" content="https://chusik.com/wp-content/uploads/2019/06/logo-grande.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://chusik.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://chusik.com/wp-content/uploads/2019/06/logo-grande.png">
+
+    <!-- Fonts and Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .primary-color {
+            background-color: #f6e100;
+        }
+
+        .secondary-color {
+            color: #f6e100;
+        }
+
+        .social-icons i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #ffeeff;
+            /*color: #f6e100;*/
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, #f6e100, #f0c300);
+            padding: 50px 0;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section img {
+            background-color: white;
+            border-radius: 50%;
+            padding: 20px;
+            max-width: 200px;
+        }
+
+        .side-buttons {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+
+        .side-buttons.left {
+            left: 10px;
+        }
+
+        .side-buttons.right {
+            right: 10px;
+        }
+
+        .side-buttons a {
+            display: block;
+            margin-bottom: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: #f6e100;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+        }
+
+        .dropdown-menu {
+            background-color: #f6e100;
+            border: none;
+        }
+
+        .dropdown-menu .dropdown-item {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #f0c300;
+            color: white;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .full-screen-section {
+            min-height: 100vh; /* Занимает 100% высоты экрана */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .full-screen-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .full-screen-section p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .full-screen-section h1 {
+                font-size: 2rem;
+            }
+
+            .full-screen-section p {
+                font-size: 1rem;
+            }
+        }
+
+        .chusik-bg {
+            background: rgba(246, 225, 0, 0.3);
+            padding: 25px;
+        }
+    </style>
+
+    <!-- Плавный скролл -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f8f9fa;">
+    <div class="container-fluid">
+        <!-- Логотип -->
+        <a class="navbar-brand" href="#">
+            <img src="https://chusik.com/wp-content/uploads/2019/06/logo-grande.png" alt="Chusik Logo"
+                 style="height: 35px; border-radius: 50%; background-color: #f8f9fa;">
+        </a>
+
+        <!-- Ссылки на смену языка -->
+        <div class="language-switcher d-flex align-items-center">
+            <a href="index.html" class="mx-2">
+                <img src="https://flagcdn.com/w40/ru.png" alt="Русский" title="Русский"
+                     style="height: 25px;width: 30px;border-radius: 5px;">
+            </a>
+            <a href="es.html" class="mx-2">
+                <img src="https://flagcdn.com/w40/es.png" alt="Español" title="Español"
+                     style="height: 25px;width: 30px;border-radius: 5px;">
+            </a>
+            <a href="en.html" class="mx-2">
+                <img src="https://flagcdn.com/w40/gb.png" alt="English" title="English"
+                     style="height: 25px;width: 30px;border-radius: 5px;">
+            </a>
+        </div>
+
+        <!-- Кнопка-бургер -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Выпадающее меню -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#chusik-sport">ChusikSport</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#chusik-diet">ChusikDiet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#chusik-plant">ChusikPlant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#packages">Пакеты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#packages">О себе</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-form">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <p><img src="https://chusik.com/wp-content/uploads/2019/06/logo-grande.png" alt="CHUSIK Logo"></p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
+        <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">Фитнес, йога, здоровое питание и
+            похудение</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Всё для вашего здорового образа жизни! Начните с нами путь к
+            лучшему себе.</p>
+        <p><a href="#packages" class="btn"
+              style="padding: 10px 20px; font-size: 1rem; color: white; background-color: #FFD700; border-radius: 5px; text-decoration: none;">Пакеты</a>
+        </p>
+    </div>
+    <!-- Side Buttons -->
+    <div class="side-buttons left">
+        <a href="tel:+123456789"><i class="fas fa-phone"></i></a>
+    </div>
+    <div class="side-buttons right">
+        <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section id="fitness" class="menu-section">
+    <!-- ChusikSport -->
+    <section id="chusik-sport" class="full-screen-section"
+             style="background: url('https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center; background-size: cover;">
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-light chusik-bg">
+            <h1 class="mb-4">ChusikSport</h1>
+            <p class="lead">Мы предлагаем тренировки для любых уровней подготовки: от начинающих до профессионалов.
+                Поддержите вашу физическую форму вместе с нами!</p>
+        </div>
+    </section>
+
+    <!-- ChusikDiet -->
+    <section id="chusik-diet" class="full-screen-section"
+             style="background: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center; background-size: cover;">
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-light chusik-bg">
+            <h1 class="mb-4">ChusikDiet</h1>
+            <p class="lead">Индивидуальные планы питания для достижения ваших целей. Правильное питание — это ключ к
+                успеху!</p>
+        </div>
+    </section>
+
+    <!-- ChusikPlant -->
+    <section id="chusik-plant" class="full-screen-section"
+             style="background: url('https://images.pexels.com/photos/4552153/pexels-photo-4552153.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center; background-size: cover;">
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-light chusik-bg">
+            <h1 class="mb-4">ChusikPlant</h1>
+            <p class="lead">Натуральные растительные добавки для поддержания здоровья. Попробуйте нашу линейку
+                продуктов!</p>
+        </div>
+    </section>
+</section>
+
+<!-- Цены Section -->
+<section id="packages" style="background-color: #fff; padding: 50px 20px; text-align: center;">
+    <h2 style="font-size: 2rem; margin-bottom: 30px;">Пакеты</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        <!-- Первый блок цен -->
+        <div style="background-color: #ee9; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px;">Диета</h3>
+            <p style="margin-bottom: 20px;">Специальная диета</p>
+            <p style="margin-bottom: 20px;">Персональная диета</p>
+        </div>
+        <div style="background-color: #ee9; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px;">Диета</h3>
+            <p style="margin-bottom: 20px;">Специальная диета</p>
+            <p style="margin-bottom: 20px;">Персональная диета</p>
+            <p style="margin-bottom: 20px;">Индивидуальный план питания с объективным отслеживанием с последующим
+                наблюдением в течение месяца</p>
+        </div>
+        <div style="background-color: #ee9; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px;">Бронза</h3>
+            <p style="margin-bottom: 20px;">Индивидуальный план питания</p>
+            <p style="margin-bottom: 20px;">Персональная диета</p>
+            <p style="margin-bottom: 20px;">Консультации и ежедневный мониторинг состояния вашего здоровья и
+                прогресса</p>
+            <p style="margin-bottom: 20px;">Индивидуальная тренировка 1 день в неделю по 1 часу</p>
+        </div>
+        <div style="background-color: #ee9; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px;">Серебро</h3>
+            <p style="margin-bottom: 20px;">Индивидуальный план питания</p>
+            <p style="margin-bottom: 20px;">Персональная диета</p>
+            <p style="margin-bottom: 20px;">Консультации и ежедневный мониторинг состояния вашего здоровья и
+                прогресса</p>
+            <p style="margin-bottom: 20px;">Индивидуальная тренировка 2 дня в неделю по 1 часу</p>
+        </div>
+        <div style="background-color: #ee9; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px;">Золото</h3>
+            <p style="margin-bottom: 20px;">Индивидуальный план питания</p>
+            <p style="margin-bottom: 20px;">Персональная диета</p>
+            <p style="margin-bottom: 20px;">Консультации и ежедневный мониторинг состояния вашего здоровья и
+                прогресса</p>
+            <p style="margin-bottom: 20px;">Индивидуальная тренировка 3 дня в неделю по 1 часу</p>
+        </div>
+        <div style="background-color: #ee9; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px;">Бриллиант</h3>
+            <p style="margin-bottom: 20px;">Индивидуальный план питания</p>
+            <p style="margin-bottom: 20px;">Персональная диета</p>
+            <p style="margin-bottom: 20px;">Консультации и ежедневный мониторинг состояния вашего здоровья и
+                прогресса</p>
+            <p style="margin-bottom: 20px;">Индивидуальная тренировка 4 дня в неделю по 1 часу</p>
+        </div>
+        <div style="background-color: #ee9; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px;">1 день</h3>
+            <p style="margin-bottom: 20px;">Персональная тренировка 1 час</p>
+            <p style="margin-bottom: 20px;">Место тренировки по желанию и удобству</p>
+        </div>
+        <div style="background-color: #ee9; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px;">Дуэт</h3>
+            <p style="margin-bottom: 20px;">Составление индивидуальной диеты для каждого</p>
+            <p style="margin-bottom: 20px;">Консультации и последующее наблюдение</p>
+            <p style="margin-bottom: 20px;">Выезд тренера на место тренировки</p>
+            <p style="margin-bottom: 20px;">Пара тренируется с тренером 2 дня в неделю. <br/>
+                Для тех, кто предпочитает тренироваться в компании своего друга или партнера, каждый со своим планом
+                питания и по более низкой цене</p>
+        </div>
+        <div style="background-color: #ee9; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px;">Онлайн</h3>
+            <p style="margin-bottom: 20px;">Персональная диета</p>
+            <p style="margin-bottom: 20px;">Регулярное развитие тренировки</p>
+            <p style="margin-bottom: 20px;">Консультации и мониторинг результатов тренировок и диеты через Интернет или
+                WhatsApp</p>
+        </div>
+        <div style="background-color: #ee9; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px;">Занятия группами “ChusikSport”</h3>
+            <p style="margin-bottom: 20px;">Chusik Aerobic</p>
+            <p style="margin-bottom: 20px;">Водная Тренировка</p>
+            <p style="margin-bottom: 20px;">Chusik Волейбол</p>
+            <p style="margin-bottom: 20px;">Chusik Туризм</p>
+        </div>
+
+        <div style="background-color: #f1f1f1; padding: 20px; border-radius: 10px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 10px;">Отмена тренировки</h3>
+            <p style="margin-bottom: 20px;">Бесплатная отмена за 24 часа до начала занятия. Позже взимается полный
+                тариф.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about-me" class="py-5"
+         style="background: url('https://chusik.com/wp-content/uploads/2019/07/chusik.jpg') no-repeat center center; background-size: cover; color: #fff;">
+    <div class="container text-center py-5" style="background: rgba(246, 225, 0, 0.3); border-radius: 10px;">
+        <h2 class="mb-4">О себе</h2>
+        <p class="lead mb-4">
+            Привет! Я профессиональный тренер и консультант по питанию с многолетним опытом. Моя цель — помочь вам
+            достичь гармонии с вашим телом и улучшить качество жизни.
+            Я верю, что правильное сочетание тренировок и здорового питания — это ключ к успеху.
+        </p>
+        <p class="mb-0">
+            В своей работе я использую индивидуальный подход, который учитывает ваш уровень подготовки, цели и
+            предпочтения. Готов помочь вам на пути к здоровому образу жизни!
+        </p>
+    </div>
+</section>
+
+<section id="contact-form" class="py-5" style="background-color: #f7f7f7;">
+    <div class="container">
+        <h2 class="text-center mb-4">Свяжитесь с нами</h2>
+        <p class="text-center mb-4">Заполните форму, и мы свяжемся с вами через WhatsApp.</p>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="whatsapp-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ваше имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Напишите ваше сообщение"
+                                  required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Отправить мне на WhatsApp <i
+                            class="fab fa-whatsapp"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 footer" style="background: linear-gradient(to right, #f6e100, #f0c300); color: #fff;">
+    <div class="container text-center">
+        <!-- Логотип -->
+        <div class="mb-3">
+            <a href="#" class="d-inline-block">
+                <img src="https://chusik.com/wp-content/uploads/2019/06/logo-grande.png" alt="Логотип"
+                     style="height: 60px; background-color: #f7f7f7; border-radius: 50%; padding: 5px;">
+            </a>
+        </div>
+        <!-- Социальные сети -->
+        <div class="d-flex justify-content-center">
+            <a href="#" class="text-light mx-2" style="font-size: 1.5rem;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-light mx-2" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-light mx-2" style="font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="text-light mx-2" style="font-size: 1.5rem;"><i class="fab fa-telegram"></i></a>
+        </div>
+    </div>
+    <p>© 2024 CHUSIK. Все права защищены.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.getElementById('whatsapp-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Предотвращаем отправку формы
+
+        // Получаем данные из формы
+        const name = document.getElementById('name').value;
+        const message = document.getElementById('message').value;
+
+        // Формируем URL для WhatsApp
+        const whatsappNumber = '34600000000'; // Замените на ваш номер WhatsApp без "+" (например, 34612345678)
+        const encodedMessage = encodeURIComponent(
+            `Здравствуйте, меня зовут ${name}. Моё сообщение: ${message}`
+        );
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+        // Открываем WhatsApp в новой вкладке
+        window.open(whatsappURL, '_blank');
+    });
+</script>
+</body>
+</html>
